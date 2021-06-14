@@ -22,15 +22,15 @@ nav a {
   font-weight: 800;
   color: midnightblue;
 }
-header {
+.header {
   padding: 16px 16px;
 }
-main {
+.main {
   padding: 16px 16px;
   max-width: 60%;
   margin: 0 auto;
 }
-body header {
+.body-header {
   text-align: center;
   background-color: cadetblue;
   padding-bottom: 20px;
