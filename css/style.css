@@ -3,10 +3,17 @@
 *:after {
   box-sizing: border-box;
 }
+*::selection {
+  background-color: cadetblue;
+}
+.body-header ::selection {
+  background-color: aliceblue;
+}
 body {
   margin: 0;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 16px;
+  color: midnightblue;
 }
 h1,
 h2,
@@ -16,6 +23,8 @@ h5,
 h6 {
   font-family: serif;
 }
+
+/*----------- NAV -----*/
 nav a {
   font-size: larger;
   font-weight: 800;
@@ -42,17 +51,29 @@ nav a:active {
 .nav-link + .nav-link {
   margin-left: 20px;
 }
+/*----- HEADER ----- */
 .header {
   padding: 16px 16px;
   max-width: 60%;
   margin: 0 auto;
-  text-align: center;
+  text-align: left;
 }
+.header h1 {
+  padding-top: 60px;
+  margin: 0;
+}
+.header p {
+  margin: 0;
+}
+/*---------- MAIN ---------*/
 main * + * {
   padding-top: 20px;
 }
 main article {
   border-bottom: 2px solid midnightblue;
+}
+main article:last-child {
+  border-bottom: none;
 }
 .main {
   padding: 16px 16px;
@@ -62,5 +83,10 @@ main article {
 .body-header {
   text-align: center;
   background-color: cadetblue;
-  padding-bottom: 20px;
+  padding: 20px 10px;
+}
+
+/*---- Emoji after Proffession ----*/
+.proffession ::after {
+  content: "⚙️👨‍💻";
 }
