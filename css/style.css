@@ -3,6 +3,10 @@
 *:after {
   box-sizing: border-box;
 }
+* html {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 16px;
+}
 *::selection {
   background-color: cadetblue;
 }
@@ -11,8 +15,6 @@
 }
 body {
   margin: 0;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 16px;
   color: midnightblue;
 }
 h1,
@@ -21,14 +23,36 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: serif;
+  font-family: sans-serif;
+}
+
+/*----- HEADER ----- */
+.header {
+  padding: 16px 16px;
+  max-width: 60%;
+  margin: 0 auto;
+  text-align: center;
+}
+.header h1 {
+  padding-top: 60px;
+  margin: 0;
+}
+.header p {
+  margin: 0;
 }
 
 /*----------- NAV -----*/
+nav {
+  margin: 40px auto;
+  padding: 0;
+}
 nav a {
-  font-size: larger;
-  font-weight: 800;
+  padding: 0;
+  margin: 0;
+  font-size: medium;
+  font-weight: 700;
   color: midnightblue;
+  border-radius: 15px;
 }
 nav a:link {
   color: midnightblue;
@@ -51,29 +75,25 @@ nav a:active {
 .nav-link + .nav-link {
   margin-left: 20px;
 }
-/*----- HEADER ----- */
-.header {
-  padding: 16px 16px;
-  max-width: 60%;
-  margin: 0 auto;
-  text-align: left;
-}
-.header h1 {
-  padding-top: 60px;
-  margin: 0;
-}
-.header p {
-  margin: 0;
-}
+
 /*---------- MAIN ---------*/
-main * + * {
+main > * + * {
   padding-top: 20px;
 }
 main article {
   border-bottom: 2px solid midnightblue;
+  padding: 0 20px;
 }
 main article:last-child {
   border-bottom: none;
+}
+.articleHeading {
+  display: inline-block;
+  position: relative;
+  left: -20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 5px 10px;
+  border-radius: 5px;
 }
 .main {
   padding: 16px 16px;
@@ -81,12 +101,52 @@ main article:last-child {
   margin: 0 auto;
 }
 .body-header {
-  text-align: center;
-  background-color: cadetblue;
-  padding: 20px 10px;
+  padding: 0;
+  text-align: left;
+  /*background-color: cadetblue;
+  border-left: 40px solid cadetblue;*/
 }
 
 /*---- Emoji after Proffession ----*/
 .proffession ::after {
   content: "⚙️👨‍💻";
+}
+.contactMail ::before {
+  content: "📫 ";
+}
+.contactSignal ::before {
+  content: "💬 ";
+}
+.contactPhone ::before {
+  content: "📞 ";
+}
+
+.exp-heading {
+  display: inline-block;
+}
+.exp-subheading {
+  display: inline-block;
+  font-style: italic;
+  padding-left: 1rem;
+}
+ol.liTall > li {
+  padding-bottom: 10px;
+}
+ol.liTall:last-child {
+  padding-bottom: none;
+}
+.hireme {
+  position: absolute;
+  display: block;
+  background-color: cadetblue;
+  padding: 10px 20px;
+  border-radius: 15px;
+  top: 60px;
+  right: 18%;
+}
+.hireme:hover {
+  -ms-transform: scale(1.2); /* IE 9 */
+  -webkit-transform: scale(1.2); /* Safari 3-8 */
+  transform: scale(1.2);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
