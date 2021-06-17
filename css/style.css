@@ -137,13 +137,13 @@ ol.liTall:last-child {
   padding-bottom: none;
 }
 .hireme {
-  position: absolute;
-  display: block;
+  position: sticky;
+  display: inline-block;
   background-color: cadetblue;
   padding: 10px 20px;
   border-radius: 15px;
   top: 60px;
-  right: 18%;
+  left: 78%;
 }
 .hireme:hover {
   -ms-transform: scale(1.2); /* IE 9 */
