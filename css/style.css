@@ -94,6 +94,7 @@ main article:last-child {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   padding: 5px 10px;
   border-radius: 5px;
+  color: cadetblue;
 }
 .main {
   padding: 16px 16px;
