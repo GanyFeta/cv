@@ -6,25 +6,27 @@
     <meta name="description" content="Dies ist mein Lebenslauf" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://unpkg.com/normalize.css@8.0.1/normalize.css" />
     <link rel="stylesheet" href="css/style.css" />
-    <title>Atef Amri - Mein Lebenslauf</title>
+    <title>Atef Amri - About Me</title>
   </head>
   <body>
+    <aside class="hireme"><a href="#">Hire Me!</a></aside>
     <header class="header">
+      <h1>Atef Amri</h1>
+      <p class="proffession">
+        <strong>Webdesigner at ZAE Bayern, Freelancer, Interpreter / Translator </strong>
+      </p>
       <nav>
         <a class="nav-link" href="#profile">Profile</a>
         <a class="nav-link" href="#experience">Experience</a>
         <a class="nav-link" href="#skills">Skills</a>
         <a class="nav-link" href="#contact">Contact</a>
       </nav>
-      <h1>Atef Amri</h1>
-      <p class="proffession">
-        <strong>Webdesigner at ZAE Bayern, Freelancer, Interpreter / Translator </strong>
-      </p>
     </header>
     <main class="main">
       <article>
-        <h2 id="profile">Profile</h2>
+        <h2 class="articleHeading" id="profile">Profile</h2>
         <p>
           Hello, My name is Atef. I especially love coffee, music, movies and building things myself
           (DIY).<br />
@@ -32,11 +34,11 @@
         </p>
       </article>
       <article>
-        <h2 id="experience">Experience</h2>
+        <h2 class="articleHeading" id="experience">Experience</h2>
         <section>
           <header class="body-header">
-            <h3>Webdesigner at ZAE Bayern</h3>
-            <p>February 2011 - now</p>
+            <h3 class="exp-heading">Webdesigner at ZAE Bayern</h3>
+            <p class="exp-subheading">February 2011 - now</p>
           </header>
           <p>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut quasi corrupti consequuntur
@@ -47,8 +49,8 @@
         </section>
         <section>
           <header class="body-header">
-            <h3>Freelancer</h3>
-            <p>2015 - now</p>
+            <h3 class="exp-heading">Freelancer</h3>
+            <p class="exp-subheading">2015 - now</p>
           </header>
           <p>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus illum, nostrum ullam
@@ -59,8 +61,8 @@
         </section>
         <section>
           <header class="body-header">
-            <h3>Interpreter / Translator</h3>
-            <p>2015 - now</p>
+            <h3 class="exp-heading">Interpreter / Translator</h3>
+            <p class="exp-subheading">2015 - now</p>
           </header>
           <p>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur quis obcaecati facere
@@ -70,8 +72,8 @@
         </section>
         <section>
           <header class="body-header">
-            <h3>Light and sound engineering, stagehand</h3>
-            <p>2009 - now</p>
+            <h3 class="exp-heading">Light and sound engineering, stagehand</h3>
+            <p class="exp-subheading">2009 - now</p>
           </header>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus sapiente libero
@@ -82,7 +84,7 @@
         </section>
       </article>
       <article>
-        <h2 id="skills">Skills</h2>
+        <h2 class="articleHeading" id="skills">Skills</h2>
         <section>
           <h3>Soft skills</h3>
           <ul>
@@ -102,11 +104,11 @@
       </article>
 
       <article>
-        <h2 id="contact">Contact</h2>
-        <ol>
-          <li>Email:</li>
-          <li>Signal:...</li>
-          <li>Tel: ....</li>
+        <h2 class="articleHeading" id="contact">Contact</h2>
+        <ol class="liTall">
+          <li class="contactMail"><span>Email:</span></li>
+          <li class="contactSignal"><span>Signal:</span></li>
+          <li class="contactPhone"><span>Phone:</span></li>
         </ol>
       </article>
     </main>
