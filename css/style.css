@@ -45,7 +45,7 @@ aside {
 }
 main {
 	padding: 1rem 1rem;
-	max-width: 80ch;
+	max-width: 70ch;
 	margin: 0 auto;
 }
 
@@ -239,16 +239,23 @@ nav a:active {
 	border-radius: 0.3rem;
 	color: cadetblue;
 }
-.exp-heading {
-	display: inline-block;
+.exp-header {
+	display: flex;
+	flex-direction: column;
 }
 .exp-subheading {
-	display: inline-block;
 	font-style: italic;
 	font-weight: 500;
-	padding-left: 1rem;
 }
-
+@media screen and (min-width: 768px) {
+	.exp-header {
+		display: flex;
+		flex-direction: row;
+		align-items: baseline;
+		justify-content: space-between;
+	}
+}
+}
 /* ----CONTACT Styling---- */
 
 ol.liTall > li {
