@@ -13,11 +13,12 @@ html {
 @media screen and (min-width: 768px) {
 	html {
 		font-size: 18px;
+		background-color: aliceblue;
 	}
 }
 @media screen and (min-width: 992px) {
 	html {
-		font-size: 22px;
+		font-size: 20px;
 	}
 }
 * body {
@@ -39,6 +40,11 @@ h4 {
 	color: midnightblue;
 	margin: 0;
 }
+a{
+	color: midnightblue;
+	text-decoration: none;
+}
+
 aside {
 	margin: 0;
 	padding: 0;
@@ -48,6 +54,13 @@ main {
 	max-width: 70ch;
 	margin: 0 auto;
 }
+footer{
+	padding: 1rem 1rem;
+	max-width: 70ch;
+	margin: 0 auto;
+	background-color: cadetblue;
+}
+
 
 /* ------ Hire Me! --------- */
 
@@ -180,10 +193,11 @@ h1 {
 }
 .nav-link {
 	padding: 0.6rem;
-	background-color: cadetblue;
+	background: rgb(240,248,255);
+	background: linear-gradient(90deg, rgba(240,248,255,1) 0%, rgba(95,158,160,1) 50%, rgba(240,248,255,1) 100%);
 	margin-top: 0.6rem;
 }
-nav a {
+nav > a {
 	padding: 0;
 	margin: 0;
 	font-size: medium;
@@ -191,19 +205,19 @@ nav a {
 	color: midnightblue;
 	border-radius: 0.3rem;
 }
-nav a:link {
+nav > a:link {
 	color: midnightblue;
 	background-color: cadetblue;
 	width: max-content;
 }
-nav a:visited {
+nav > a:visited {
 	color: aliceblue;
 }
-nav a:hover {
+nav > a:hover {
 	color: aliceblue;
 	background-color: midnightblue;
 }
-nav a:active {
+nav > a:active {
 	background-color: aliceblue;
 }
 @media print {
@@ -272,4 +286,10 @@ ol.liTall:last-child {
 }
 .contactPhone ::before {
 	content: "📞 ";
+}
+.contact-me{
+	font-weight: 800;
+}
+.contact-mail{
+	text-decoration: underline;
 }
