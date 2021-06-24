@@ -6,6 +6,11 @@
 }
 @import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@400;500;700&family=Roboto:wght@700&display=swap");
 
+:root{
+	--font-color: midnightblue;
+	--bg-color: aliceblue;
+	--bg-select: cadetblue;
+}
 html {
 	font-family: "Merriweather Sans", sans-serif;
 	font-size: 16px;
@@ -13,7 +18,7 @@ html {
 @media screen and (min-width: 768px) {
 	html {
 		font-size: 18px;
-		background-color: aliceblue;
+		background-color: var(--bg-color);
 	}
 }
 @media screen and (min-width: 992px) {
@@ -23,12 +28,12 @@ html {
 }
 * body {
 	line-height: 1.5rem;
-	color: midnightblue;
+	color: var(--font-color);
 	margin: 0;
 	padding: 0;
 }
 *::selection {
-	background-color: cadetblue;
+	background-color: var(--bg-select);
 }
 
 h1,
@@ -37,14 +42,17 @@ h3,
 h4 {
 	font-family: "Roboto", sans-serif;
 	font-weight: 900;
-	color: midnightblue;
+	color: var(--font-color);
 	margin: 0;
 }
-a{
-	color: midnightblue;
-	text-decoration: none;
+a,
+a:link,
+a:hover,
+a:visited,
+a:active {
+  color: var(--font-color);
+  text-decoration: none;
 }
-
 aside {
 	margin: 0;
 	padding: 0;
@@ -58,7 +66,7 @@ footer{
 	padding: 1rem 1rem;
 	max-width: 70ch;
 	margin: 0 auto;
-	background-color: cadetblue;
+	background-color: var(--bg-select);
 }
 
 
@@ -67,7 +75,7 @@ footer{
 .hireme {
 	position: sticky;
 	display: inline-block;
-	background-color: cadetblue;
+	background-color: var(--bg-select);
 	padding: 0.6rem 1.2rem;
 	border-radius: 0.3rem;
 	top: 7rem;
@@ -83,7 +91,7 @@ footer{
 }
 aside.hireme > a {
 	text-decoration: none;
-	color: midnightblue;
+	color: var(--font-color);
 	font-weight: 700;
 }
 @keyframes beat {
@@ -131,7 +139,7 @@ aside.hireme > a {
 		width: fit-content;
 		top: 2rem;
 		left: 80%;
-		background-color: cadetblue;
+		background-color: var(--bg-select);
 		opacity: 0.8;
 		padding: 0.6rem 1.2rem;
 		border-radius: 0.3rem;
@@ -185,7 +193,7 @@ h1 {
 		justify-content: center;
 	}
 	nav > a + a {
-		margin-left: 1rem;
+		margin-left: 2rem;
 	}
 }
 .navi > * {
@@ -196,30 +204,49 @@ h1 {
 	background: rgb(240,248,255);
 	background: linear-gradient(90deg, rgba(240,248,255,1) 0%, rgba(95,158,160,1) 50%, rgba(240,248,255,1) 100%);
 	margin-top: 0.6rem;
+	border-radius: .6rem;
+	transition: border-bottom .5s;
 }
+/* --- Transistion effect on NAV --- */
+.nav-link::after , .nav-link::before{
+	display: block;
+	content: '';
+	border-bottom: .2rem solid var(--font-color);
+	transform: scale(0);
+	transition: transform 300ms ease-in-out;
+}
+.nav-link:hover::after{
+	transform: scale(1);
+}
+.nav-link:focus{
+	outline-color: var(--bg-select);
+	outline-style: solid;
+}
+/* ---end Transition --- */
 nav > a {
 	padding: 0;
 	margin: 0;
 	font-size: medium;
 	font-weight: 700;
-	color: midnightblue;
+	color: var(--font-color);
 	border-radius: 0.3rem;
 }
 nav > a:link {
-	color: midnightblue;
-	background-color: cadetblue;
+	color: var(--font-color);
+	background-color: var(--bg-select);
 	width: max-content;
 }
 nav > a:visited {
 	color: aliceblue;
 }
-nav > a:hover {
+/* nav > a:hover {
 	color: aliceblue;
-	background-color: midnightblue;
-}
+	background-color: var(--font-color);
+} */
 nav > a:active {
-	background-color: aliceblue;
+	background-color: var(--bg-color);
 }
+
 @media print {
 	.hireme,
 	.hireme-narrow,
@@ -230,7 +257,7 @@ nav > a:active {
 /* --- MAIN --- */
 
 .main-article {
-	border-bottom: 0.2rem solid midnightblue;
+	border-bottom: 0.2rem solid var(--font-color);
 	padding: 0 1.25rem;
 	margin-bottom: 3rem;
 }
@@ -242,16 +269,21 @@ nav > a:active {
 	.main-article {
 		margin-bottom: 4rem;
 	}
+	.article-grid{
+		display: grid;
+		grid-template-columns: 1fr 2fr;
+	}
 }
+
 .article-heading {
 	display: inline-block;
 	position: relative;
 	left: -1.2rem;
-	box-shadow: 0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.2), 0 0.4rem 0.7rem 0 rgba(0, 0, 0, 0.19);
+	color: cadetblue;
+	/* box-shadow: 0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.2), 0 0.4rem 0.7rem 0 rgba(0, 0, 0, 0.19);
 	padding: 0.6rem 1.2rem;
 	margin-bottom: 2rem;
-	border-radius: 0.3rem;
-	color: cadetblue;
+	border-radius: 0.3rem; */
 }
 .exp-header {
 	display: flex;
@@ -290,6 +322,6 @@ ol.liTall:last-child {
 .contact-me{
 	font-weight: 800;
 }
-.contact-mail{
+a.contact-mail{
 	text-decoration: underline;
 }
