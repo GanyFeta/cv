@@ -94,6 +94,11 @@ aside.hireme > a {
 		display: none;
 	}
 }
+@media screen and (min-width: 992px) {
+	.hireme-narrow {
+		display: none;
+	}
+}
 @media screen and (max-width: 992px) {
 	.hireme {
 		position: sticky;
